@@ -3,11 +3,14 @@ header {
   background-color: @header-background-color;
   position: fixed;
   width: 100%;
-  z-index: 3;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  z-index: 100;
   border-bottom: 1px solid #d9d9d9;
 
+  p{
+      padding: 0;
+      margin: 0;
+  }
+  
   #header-site-title {
     font-family: @header-site-title-type-font-family;
     font-weight: @header-site-title-type-font-weight;
@@ -94,7 +97,7 @@ header {
         }
         margin: 0;
         padding: 0;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
         position: relative;
         display: inline-block;
         ul {
@@ -144,6 +147,7 @@ header {
       margin-top: 20px;
       p{
           margin: 0;
+          font-family: @header-emergency-phone-font-family;
       }
   }
 }

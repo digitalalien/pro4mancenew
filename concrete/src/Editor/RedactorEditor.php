@@ -90,16 +90,24 @@ EOL;
 
     public function outputPageInlineEditor($key, $content = null)
     {
+        $plugins[] = 'fontfamily';
+        $plugins[] = 'fontsize';
+        $plugins[] = 'fontcolor';
         $plugins = $this->pluginManager->getSelectedPlugins();
         $plugins[] = 'concrete5magic';
         $plugins[] = 'concrete5inline';
+        
         return $this->getEditor($key, $content, array('plugins' => $plugins, 'minHeight' => 300));
     }
 
     public function outputBlockEditModeEditor($key, $content)
     {
+        $plugins[] = 'fontfamily';
+        $plugins[] = 'fontsize';
+        $plugins[] = 'fontcolor';
         $plugins = $this->pluginManager->getSelectedPlugins();
         $plugins[] = 'concrete5magic';
+        
         return $this->getEditor($key, $content, array('plugins' => $plugins, 'minHeight' => 300));
     }
 

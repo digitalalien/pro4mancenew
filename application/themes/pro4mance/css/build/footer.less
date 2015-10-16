@@ -1,11 +1,28 @@
 footer#footer-theme {
-
-  a {
-    color: @footer-link-color;
-    &:hover {
-      color: @footer-link-hover-color;
+    padding-bottom: 30px;
+    background-color: @footer-bottom-background-color;
+    ul, ul .nav{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            a{
+                padding: 0;
+                margin: 0;
+                text-transform: uppercase;
+                font-size: .8em;
+                &:hover{
+                    background: none;
+                }
+            } 
+        }
     }
-  }
+    a {
+      color: @footer-link-color;
+      &:hover {
+        color: @footer-link-hover-color;
+      }
+    }
 
   color: @footer-text-color;
 
@@ -15,7 +32,7 @@ footer#footer-theme {
     ul {
       a {
         color: @footer-social-icon-color;
-
+        font-size: 1.5em;
         &:hover {
           color: @footer-social-icon-hover-color;
         }
@@ -29,14 +46,8 @@ footer#footer-theme {
     padding-bottom: 30px;
   }
 
-  section:first-child {
-    background-color: @footer-top-background-color;
-  }
-
-  section:last-child {
-    padding-bottom: 30px;
-    background-color: @footer-bottom-background-color;
-  }
+  
+    
 
   #footer-site-title {
     font-family: @footer-site-title-type-font-family;

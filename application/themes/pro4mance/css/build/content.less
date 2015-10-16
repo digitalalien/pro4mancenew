@@ -1,3 +1,6 @@
+a{
+    font-weight: bold;
+}
 div.ccm-page {
   font-family: @body-type-font-family;
   font-weight: @body-type-font-weight;
@@ -33,8 +36,8 @@ div.ccm-page {
 
   main {
     background-color: @page-background-color;
-    padding-bottom: 80px;
-    padding-top: 104px;
+    padding-bottom: 0px;
+    padding-top: 74px;
     /*
     div.container:last-child {
       padding-bottom: 80px;
@@ -79,12 +82,41 @@ div.ccm-page {
   }
   .bg-primary{
       background-color: #000;
+      padding:60px 0;
+      
+      .btn.btn-primary {
+              border: 2px solid #fff;
+              color: #fff;
+              font-size: 16px;
+              font-weight: bold;
+              margin: 50px auto;
+              padding: 5px;
+              width: 150px;
+              background: none;
+              border-radius: 0;
+              
+      }
   }
   .bg-secondary{
       background-color: #f1f0f0;
-      padding: 5% 0;
+      padding: 60px 0;
+      .btn.btn-primary {
+              border: 2px solid #000;
+              color: #000;
+              font-size: 16px;
+              font-weight: bold;
+              padding: 5px;
+              width: 150px;
+              background: none;
+              border-radius: 0;
+              
+            }
+      
       h1{
           color: #c71633;
+      }
+      h4{
+          font-style: italic;
       }
       .nav{
           text-align: center;
@@ -109,6 +141,12 @@ div.ccm-page {
       
   }
   
+  .about-us{
+      p{
+          text-align: center;
+      }
+  }
+  
   .services{
       margin: 20px auto;
       text-align: center;
@@ -125,10 +163,27 @@ div.ccm-page {
       }
   }
   
+  .logos{
+      text-align: center;
+      margin: 60px 0 0;
+      p{
+          float: left;
+          margin: 10px;
+          img{
+              max-height: 100px;
+          }
+      }
+      .container .row .col-sm-12{
+          display: inline-block;
+          width: auto;
+          float: none;
+      }
+  }
+  
   .anchor{
     display: block;
-    height: 150px; /*same height as header*/
-    margin-top: -150px; /*same height as header*/
+    height: 104px; /*same height as header*/
+    margin-top: -104px; /*same height as header*/
     visibility: hidden;
   }
 }

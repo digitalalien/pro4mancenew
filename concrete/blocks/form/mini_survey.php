@@ -251,7 +251,7 @@ class MiniSurvey {
 
 				case 'text':
 					$val=($_REQUEST['Question'.$msqID])?Loader::helper('text')->entities($_REQUEST['Question'.$msqID]):'';
-					return '<textarea name="Question'.$msqID.'" class="form-control" id="Question'.$msqID.'" cols="'.$questionData['width'].'" rows="'.$questionData['height'].'">'.$val.'</textarea>';
+					return '<textarea name="Question'.$msqID.'" placeholder="'.$questionData['question'].'" class="form-control" id="Question'.$msqID.'" cols="'.$questionData['width'].'" rows="'.$questionData['height'].'">'.$val.'</textarea>';
 				case 'url':
 					$val=($_REQUEST['Question'.$msqID])?$_REQUEST['Question'.$msqID]:'';
 					return '<input name="Question'.$msqID.'" id="Question'.$msqID.'" class="form-control" type="url" value="'.stripslashes(htmlspecialchars($val)).'" />';
@@ -265,20 +265,20 @@ class MiniSurvey {
 					$val=($_REQUEST['Question'.$msqID])?$_REQUEST['Question'.$msqID]:$defaultDate;
 					return $datetime->date('Question'.$msqID,$val);
 				case 'datetime':
-                    if(isset($_REQUEST['Question'.$msqID])) {
-                        $val = $_REQUEST['Question'.$msqID];
-                    } elseif ($_REQUEST['Question'.$msqID.'_dt'] && $_REQUEST['Question'.$msqID.'_h']
-                        && $_REQUEST['Question'.$msqID.'_m'] && $_REQUEST['Question'.$msqID.'_a']) {
-                        $val = $_REQUEST['Question'.$msqID.'_dt'] . ' ' . $_REQUEST['Question'.$msqID.'_h']
-                            . ':' . $_REQUEST['Question'.$msqID.'_m'] . ' ' . $_REQUEST['Question'.$msqID.'_a'];
-                    } else {
-                        $val = $defaultDate;
-                    }
+                                    if(isset($_REQUEST['Question'.$msqID])) {
+                                        $val = $_REQUEST['Question'.$msqID];
+                                    } elseif ($_REQUEST['Question'.$msqID.'_dt'] && $_REQUEST['Question'.$msqID.'_h']
+                                        && $_REQUEST['Question'.$msqID.'_m'] && $_REQUEST['Question'.$msqID.'_a']) {
+                                        $val = $_REQUEST['Question'.$msqID.'_dt'] . ' ' . $_REQUEST['Question'.$msqID.'_h']
+                                            . ':' . $_REQUEST['Question'.$msqID.'_m'] . ' ' . $_REQUEST['Question'.$msqID.'_a'];
+                                    } else {
+                                        $val = $defaultDate;
+                                    }
 					return $datetime->datetime('Question'.$msqID,$val);
 				case 'field':
 				default:
 					$val=($_REQUEST['Question'.$msqID])?$_REQUEST['Question'.$msqID]:'';
-					return '<input name="Question'.$msqID.'" id="Question'.$msqID.'" class="form-control" type="text" value="'.stripslashes(htmlspecialchars($val)).'" />';
+					return '<input name="Question'.$msqID.'" placeholder="'.$questionData['question'].'" id="Question'.$msqID.'" class="form-control" type="text" value="'.stripslashes(htmlspecialchars($val)).'" />';
 			}
 		}
 

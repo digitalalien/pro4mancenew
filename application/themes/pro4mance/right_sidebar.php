@@ -3,12 +3,17 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 
 <main>
-    <?php
-    $a = new Area('Page Header');
-    $a->enableGridContainer();
-    $a->display($c);
-    ?>
-    <div class="container">
+    
+    <div class="container bg-secondary">
+        <div class="row">
+            <div class="col-sm-12">
+                <?php
+                $a = new Area('Page Header');
+                $a->enableGridContainer();
+                $a->display($c);
+                ?>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-8 col-content">
                 <?php

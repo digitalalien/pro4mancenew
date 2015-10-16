@@ -9,7 +9,7 @@ $a->enableGridContainer();
 $a->display($c);
 ?>
 <span class="anchor" id="aboutus"></span>
-<div class="bg-primary">
+<div class="bg-primary about-us">
 <?php
 $a = new Area('Intro');
 $a->enableGridContainer();
@@ -42,13 +42,14 @@ $a = new Area('contact');
 $a->enableGridContainer();
 $a->display($c);
 ?>
-</div>
-    
+<div class="logos">
 <?php
-$a = new Area('Page Footer');
+$a = new Area('logos');
 $a->enableGridContainer();
 $a->display($c);
 ?>
+</div>
+</div>
 
 </main>
 

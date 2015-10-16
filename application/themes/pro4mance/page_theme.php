@@ -96,7 +96,7 @@ class PageTheme extends \Concrete\Core\Page\Theme\Theme implements ThemeProvider
     {
         return array(
             array('title' => t('Text Impact'), 'menuClass' => 'text-impact', 'spanClass' => 'text-impact', 'forceBlock' => 1),
-            array('title' => t('Title Caps Bold'), 'menuClass' => 'title-caps-bold', 'spanClass' => 'title-caps-bold', 'forceBlock' => 1),
+            array('title' => t('Gotham Bold'), 'menuClass' => 'gotham-bold', 'spanClass' => 'gotham-bold', 'forceBlock' => 1),
             array('title' => t('Title Caps'), 'menuClass' => 'title-caps', 'spanClass' => 'title-caps', 'forceBlock' => 1),
             array('title' => t('Image Caption'), 'menuClass' => 'image-caption', 'spanClass' => 'image-caption', 'forceBlock' => '-1'),
             array('title' => t('Standard Button'), 'menuClass' => '', 'spanClass' => 'btn btn-default', 'forceBlock' => '-1'),
